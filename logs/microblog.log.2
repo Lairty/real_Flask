@@ -1,0 +1,114 @@
+2019-04-25 15:56:18,722 ERROR: Exception on /dvor [GET] [in C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 1193, in _execute_context
+    context)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\engine\default.py", line 507, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such column: post.timestamp
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\PyCharm\Flask\app\routes.py", line 313, in dvor
+    page, app.config['POSTS_PER_PAGE'], False)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask_sqlalchemy\__init__.py", line 491, in paginate
+    items = self.limit(per_page).offset((page - 1) * per_page).all()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\orm\query.py", line 2773, in all
+    return list(self)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\orm\query.py", line 2925, in __iter__
+    return self._execute_and_instances(context)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\orm\query.py", line 2948, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 948, in execute
+    return meth(self, multiparams, params)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\sql\elements.py", line 269, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 1060, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 1200, in _execute_context
+    context)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 1413, in _handle_dbapi_exception
+    exc_info
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\util\compat.py", line 203, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\util\compat.py", line 186, in reraise
+    raise value.with_traceback(tb)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 1193, in _execute_context
+    context)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\engine\default.py", line 507, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: post.timestamp [SQL: 'SELECT feedback.id AS feedback_id, feedback.body AS feedback_body, feedback.about AS feedback_about, feedback.timestamp AS feedback_timestamp, feedback.user_id AS feedback_user_id, feedback."costCl" AS "feedback_costCl", feedback."costCh" AS "feedback_costCh", feedback."costA" AS "feedback_costA", feedback."costS" AS "feedback_costS", feedback.cost AS feedback_cost \nFROM feedback ORDER BY post.timestamp DESC\n LIMIT ? OFFSET ?'] [parameters: (25, 0)] (Background on this error at: http://sqlalche.me/e/e3q8)
+2019-04-25 15:58:27,961 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 15:58:44,720 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 16:01:05,430 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 16:02:33,153 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 16:03:37,610 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 16:03:40,309 ERROR: Exception on /dvor [POST] [in C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\PyCharm\Flask\app\routes.py", line 299, in dvor
+    if form.validate_on_submit():
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask_wtf\form.py", line 101, in validate_on_submit
+    return self.is_submitted() and self.validate()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\wtforms\form.py", line 310, in validate
+    return super(Form, self).validate(extra)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\wtforms\form.py", line 152, in validate
+    if not field.validate(self, extra):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\wtforms\fields\core.py", line 206, in validate
+    stop_validation = self._run_validation_chain(form, chain)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\wtforms\fields\core.py", line 226, in _run_validation_chain
+    validator(form, self)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\wtforms\validators.py", line 134, in __call__
+    if data is None or (self.min is not None and data < self.min) or \
+TypeError: '<' not supported between instances of 'str' and 'int'
+2019-04-25 16:07:53,459 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 16:08:18,754 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 16:09:07,837 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 16:10:24,148 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 16:10:47,567 ERROR: Exception on /dvor [POST] [in C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\PyCharm\Flask\app\routes.py", line 306, in dvor
+    fb.about = int(form.abF)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'IntegerField'
+2019-04-25 16:11:33,775 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]

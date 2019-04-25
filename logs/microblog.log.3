@@ -1,0 +1,101 @@
+2019-04-25 14:30:32,549 ERROR: Exception on /dvor [GET] [in C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1816, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1831, in finalize_request
+    response = self.make_response(rv)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1957, in make_response
+    'The view function did not return a valid response. The'
+TypeError: The view function did not return a valid response. The function either returned None or ended without a return statement.
+2019-04-25 14:32:50,669 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 14:33:58,518 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 14:34:12,932 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 14:40:57,647 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 14:41:05,691 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 14:41:42,819 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 14:44:58,509 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 14:45:19,194 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 14:47:19,385 ERROR: Exception on /index [POST] [in C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\PyCharm\Flask\app\routes.py", line 41, in index
+    post.cityZ = 1 if form.cityF else 0
+AttributeError: 'PostForm' object has no attribute 'cityF'
+2019-04-25 14:48:41,760 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 14:50:04,331 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 15:02:34,807 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 15:03:23,270 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 15:07:38,168 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 15:11:54,038 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 15:14:23,380 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 15:55:04,836 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 15:55:10,753 ERROR: Exception on /dvor [GET] [in C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 1193, in _execute_context
+    context)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\engine\default.py", line 507, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such column: post.timestamp
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\PyCharm\Flask\app\routes.py", line 313, in dvor
+    page, app.config['POSTS_PER_PAGE'], False)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask_sqlalchemy\__init__.py", line 491, in paginate
+    items = self.limit(per_page).offset((page - 1) * per_page).all()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\orm\query.py", line 2773, in all
+    return list(self)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\orm\query.py", line 2925, in __iter__
+    return self._execute_and_instances(context)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\orm\query.py", line 2948, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 948, in execute
+    return meth(self, multiparams, params)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\sql\elements.py", line 269, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 1060, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 1200, in _execute_context
+    context)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 1413, in _handle_dbapi_exception
+    exc_info
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\util\compat.py", line 203, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\util\compat.py", line 186, in reraise
+    raise value.with_traceback(tb)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 1193, in _execute_context
+    context)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\engine\default.py", line 507, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: post.timestamp [SQL: 'SELECT feedback.id AS feedback_id, feedback.body AS feedback_body, feedback.about AS feedback_about, feedback.timestamp AS feedback_timestamp, feedback.user_id AS feedback_user_id, feedback."costCl" AS "feedback_costCl", feedback."costCh" AS "feedback_costCh", feedback."costA" AS "feedback_costA", feedback."costS" AS "feedback_costS", feedback.cost AS feedback_cost \nFROM feedback ORDER BY post.timestamp DESC\n LIMIT ? OFFSET ?'] [parameters: (25, 0)] (Background on this error at: http://sqlalche.me/e/e3q8)
+2019-04-25 15:56:14,031 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]

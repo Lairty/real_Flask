@@ -1,0 +1,98 @@
+2019-04-25 16:18:14,775 ERROR: Exception on /dvor [POST] [in C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 1193, in _execute_context
+    context)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\engine\default.py", line 507, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.InterfaceError: Error binding parameter 2 - probably unsupported type.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\PyCharm\Flask\app\routes.py", line 309, in dvor
+    db.session.commit()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\orm\scoping.py", line 153, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\orm\session.py", line 943, in commit
+    self.transaction.commit()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\orm\session.py", line 467, in commit
+    self._prepare_impl()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\orm\session.py", line 447, in _prepare_impl
+    self.session.flush()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\orm\session.py", line 2254, in flush
+    self._flush(objects)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\orm\session.py", line 2380, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\util\langhelpers.py", line 66, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\util\compat.py", line 187, in reraise
+    raise value
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\orm\session.py", line 2344, in _flush
+    flush_context.execute()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 391, in execute
+    rec.execute(self)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\orm\unitofwork.py", line 556, in execute
+    uow
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\orm\persistence.py", line 181, in save_obj
+    mapper, table, insert)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\orm\persistence.py", line 866, in _emit_insert_statements
+    execute(statement, params)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 948, in execute
+    return meth(self, multiparams, params)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\sql\elements.py", line 269, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 1060, in _execute_clauseelement
+    compiled_sql, distilled_params
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 1200, in _execute_context
+    context)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 1413, in _handle_dbapi_exception
+    exc_info
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\util\compat.py", line 203, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\util\compat.py", line 186, in reraise
+    raise value.with_traceback(tb)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\engine\base.py", line 1193, in _execute_context
+    context)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\sqlalchemy\engine\default.py", line 507, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.InterfaceError: (sqlite3.InterfaceError) Error binding parameter 2 - probably unsupported type. [SQL: 'INSERT INTO feedback (body, about, str, timestamp, user_id, "costCl", "costCh", "costA", "costS", cost) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'] [parameters: ('Хороший двор', 12, <wtforms.fields.core.StringField object at 0x0000000006DD37F0>, '2019-04-25 11:18:14.774769', 1, 8, 8, 8, 8, 8.0)] (Background on this error at: http://sqlalche.me/e/rvf5)
+2019-04-25 16:20:01,787 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 16:22:17,957 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 16:23:21,350 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 16:23:30,016 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 16:23:40,955 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 16:24:08,310 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 11:35:22,225 INFO: Microblog startup [in C:\Users\rslsa\PycharmProjects\real_Flask\app\errors.py:45]
+2019-04-25 11:41:28,684 INFO: Microblog startup [in C:\Users\rslsa\PycharmProjects\real_Flask\app\errors.py:45]
+2019-04-25 11:43:34,516 INFO: Microblog startup [in C:\Users\rslsa\PycharmProjects\real_Flask\app\errors.py:45]
+2019-04-25 17:24:09,915 INFO: Microblog startup [in F:\real_Flask\app\errors.py:45]
+2019-04-25 17:30:10,692 INFO: Microblog startup [in F:\real_Flask\app\errors.py:45]
+2019-04-25 17:37:18,042 INFO: Microblog startup [in F:\real_Flask\app\errors.py:45]
+2019-04-25 17:39:50,982 INFO: Microblog startup [in F:\real_Flask\app\errors.py:45]
+2019-04-25 17:43:33,149 INFO: Microblog startup [in F:\real_Flask\app\errors.py:45]
+2019-04-25 17:45:20,163 INFO: Microblog startup [in F:\real_Flask\app\errors.py:45]
+2019-04-25 17:45:45,642 INFO: Microblog startup [in F:\real_Flask\app\errors.py:45]
+2019-04-25 17:45:56,355 INFO: Microblog startup [in F:\real_Flask\app\errors.py:45]
+2019-04-25 17:48:29,704 INFO: Microblog startup [in F:\real_Flask\app\errors.py:45]
+2019-04-25 17:52:05,106 INFO: Microblog startup [in F:\real_Flask\app\errors.py:45]
+2019-04-25 17:53:09,181 INFO: Microblog startup [in F:\real_Flask\app\errors.py:45]
+2019-04-25 17:54:06,019 INFO: Microblog startup [in F:\real_Flask\app\errors.py:45]
+2019-04-25 17:54:51,442 INFO: Microblog startup [in F:\real_Flask\app\errors.py:45]
+2019-04-25 17:55:47,047 INFO: Microblog startup [in F:\real_Flask\app\errors.py:45]
+2019-04-25 17:56:23,173 INFO: Microblog startup [in F:\real_Flask\app\errors.py:45]
+2019-04-25 17:57:59,325 INFO: Microblog startup [in F:\real_Flask\app\errors.py:45]
+2019-04-25 18:04:50,770 INFO: Microblog startup [in F:\real_Flask\app\errors.py:45]

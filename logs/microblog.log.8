@@ -1,0 +1,98 @@
+2019-04-25 11:53:24,977 ERROR: Exception on /pod/2 [GET] [in C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\PyCharm\Flask\app\routes.py", line 254, in pod
+    x = int(p.pol)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+2019-04-25 11:57:14,701 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 11:57:38,070 ERROR: Exception on /pod/2 [GET] [in C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\PyCharm\Flask\app\routes.py", line 254, in pod
+    x = p.pol.encode('int32')
+AttributeError: 'NoneType' object has no attribute 'encode'
+2019-04-25 11:59:43,934 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 12:06:37,170 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 12:07:55,416 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 12:07:57,227 ERROR: Exception on /pod/2 [GET] [in C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\PyCharm\Flask\app\routes.py", line 255, in pod
+    p.pol = x + 1
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
+2019-04-25 12:08:02,482 ERROR: Exception on /pod/3 [GET] [in C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py:1761]
+Traceback (most recent call last):
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\ProgramData\Anaconda3\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "D:\PyCharm\Flask\app\routes.py", line 255, in pod
+    p.pol = x + 1
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'int'
+2019-04-25 12:09:28,404 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 12:09:59,520 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 12:10:21,732 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 12:10:33,111 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 12:10:44,231 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 12:10:54,381 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 12:16:10,591 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 12:16:57,114 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 12:18:33,989 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 12:20:20,694 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 12:21:10,261 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 12:21:56,496 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 12:22:06,018 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 12:26:33,338 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 12:29:58,831 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 12:35:46,036 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 12:35:59,334 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
+2019-04-25 12:36:32,389 INFO: Microblog startup [in D:\PyCharm\Flask\app\errors.py:45]
