@@ -1,0 +1,23 @@
+    <table class="table table-hover">
+        <tr>
+            <td width="70px">
+                <a href="{{ url_for('user', username=post.author.username) }}">
+                    <img src="{{ post.author.avatar(70) }}" />
+                </a>
+            </td>
+            <td style="background-color:#FFFFFF">
+                <a href="{{ url_for('user', username=post.author.username) }}">
+                    {{ post.author.username }}
+                </a>
+                says about {{ post.str }}, {{ post.about }}:
+                <br>
+                {{ post.body }}
+				<br>
+				<p>Чистота: {{post.costCl }} / 10</p>
+				<p>Для детей: {{post.costCh }} / 10</p>
+				<p>Для животных: {{post.costA }} / 10</p>
+				<p>Для спорта: {{post.costS }} / 10</p>
+				<p>Общая оценка: {{post.cost }} / 10</p>
+            </td>
+        </tr>
+    </table>
